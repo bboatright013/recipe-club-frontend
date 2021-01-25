@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap'); */
+
+body {
+  margin: 2pt;
+  padding: 2pt;
+  /* font-family: 'Scheherazade', serif;
+  font-size: 18pt; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-link {
+  width: 100%;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Form {
+  width: 33%;
+  margin: 0 auto;
+}
+
+.PostForm {
+  padding: 4pt;
+}
+
+.TagForm {
+  width: 33%;
+  margin: 0 auto;
+}
+
+.Logo {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.form-check-input {
+  position: inherit !important; 
+  margin-left: 0 !important;
+}
+.badge {
+  margin: 2pt;
+}
+.Recipe-Details {
+  margin: 2pt auto;
+  width: 98%;
+}
+
+.btn {
+ margin: 4pt;
+}
+
+.delete {
+  cursor: pointer;
+  margin-left: 2pt;
+}
+
+.card-subtitle {
+  font-size: .8rem;
+  margin: 2pt 0 2pt 0 !important;
+}
+
+.Hero-Image {
+  max-width: 100%;
+  border-radius: 2pt;
+  /* width: 350pt; */
+}
+.Recipe-Details-Postedby {
+  font-size: .8rem;
+}
+
+.Recipe-Ingredient, .Recipe-Instruction {
+  margin: 4pt 3pt;
+  font-size: 18pt;
+}
+
+.Comment-Form {
+  margin: 10pt auto;
+  padding-left: 10pt;
+}
+
+.Comment {
+  margin: 5pt;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-left: 2pt;
+  padding-bottom: 2pt;
+  border-left: 1px solid rgba(0,0,0,0.2);
+}
+.Comment span {
+  font-size: 10pt;;
+}
+.Comment div {
+  font-size: 14pt;
+}
+#tags {
+  min-width: 100pt;
+  padding: 2pt;
+  cursor: pointer;
+}
+#tagSelector {
+  width: 150pt;
+  margin-left: 15pt;
+}
+@media screen and (max-width: 400px) {
+  .star {
+    height: 20pt;
+    width: 20pt;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #tagSelector {
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Recipe-Ingredient, .Recipe-Instruction {
+    margin: 4pt 3pt;
+    font-size: 12pt;
+  }
+
+  .Form {
+    width: 88%;
+    margin: 0 auto;
   }
 }

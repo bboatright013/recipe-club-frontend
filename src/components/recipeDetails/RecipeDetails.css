@@ -1,0 +1,17 @@
+
+.RecipeDetails-Rating input[type="radio"] {
+    display: none;
+}
+
+.RecipeDetails-Rating {
+    display: inline-block;
+    margin-right: 5pt;
+}
+.Content-Owner {
+    margin: 2pt;
+    padding-left: 4pt;
+}
+.star {
+    cursor: pointer;
+    transition: color 150ms;
+}

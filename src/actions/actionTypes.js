@@ -1,0 +1,48 @@
+//Recipe list actions
+export const LOAD_RECIPES = "LOAD_RECIPES";
+export const ADD_RECIPES = "ADD_RECIPES";
+export const DELETE_RECIPES = "DELETE_RECIPES";
+export const LOAD_RECIPE_TAGS = "LOAD_RECIPE_TAGS";
+export const GET_FILTERED_RECIPES = "GET_FILTERED_RECIPES";
+
+//Recipe details actions
+export const LOAD_RECIPE_DETAILS = "LOAD_RECIPE_DETAILS";
+export const EDIT_RECIPE_DETAILS = "EDIT_RECIPE_DETAILS";
+export const DISMOUNT_RECIPE_DETAILS = "DISMOUNT_RECIPE_DETAILS"
+
+//Recipe tags actions
+export const ADD_TAG_TO_RECIPE = "ADD_TAG_TO_RECIPE";
+export const DELETE_TAGS_FROM_RECIPE = "DELETE_TAGS_FROM_RECIPE";
+
+// user actions
+export const LOAD_USER_DETAILS = "LOAD_USER_DETAILS";
+export const EDIT_USER_DETAILS = "EDIT_USER_DETAILS";
+export const DELETE_USER_DETAILS = "DELETE_USER_DETAILS";
+export const GET_USER_DETAILS = "GET_USER_DETAILS";
+export const ADD_USER_TOKEN = "ADD_USER_TOKEN";
+export const LOGOUT_USER = "LOGOUT_USER";
+
+//user rating actions
+export const ADD_USER_RATING = "ADD_USER_RATING";
+export const DELETE_USER_RATING = "DELETE_USER_RATING";
+export const EDIT_USER_RATING = "EDIT_USER_RATING";
+export const LOAD_USER_RATINGS = "LOAD_USER_RATINGS";
+
+//user cookbook actions
+export const LOAD_USERS_COOKBOOK = "LOAD_USERS_COOKBOOK";
+export const ADD_USERS_COOKBOOK = "ADD_USERS_COOKBOOK";
+export const DELETE_USERS_COOKBOOK = "DELETE_USERS_COOKBOOK";
+
+//comment actions
+export const ADD_COMMENT_TO_RECIPE = "ADD_COMMENT_TO_RECIPE";
+export const DELETE_COMMENT_FROM_RECIPE = "DELETE_COMMENT_FROM_RECIPE";
+export const EDIT_COMMENT_ON_RECIPE = "EDIT_COMMENT_ON_RECIPE";
+export const GET_COMMENTS_FOR_RECIPE = "GET_COMMENTS_FOR_RECIPE";
+
+// filter actions
+export const LOAD_TAGS = "LOAD_TAGS";
+export const ADD_TAGS = "ADD_TAGS";
+export const DELETE_TAGS = "DELETE_TAGS"
+
+// admin actions
+export const LOAD_USERS = "LOAD_USERS";
