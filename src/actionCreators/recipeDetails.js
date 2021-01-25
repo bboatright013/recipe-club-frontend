@@ -2,7 +2,8 @@
 import axios from 'axios';
 import {LOAD_RECIPE_DETAILS, EDIT_RECIPE_DETAILS, ADD_TAG_TO_RECIPE, DELETE_TAGS_FROM_RECIPE, DISMOUNT_RECIPE_DETAILS, DELETE_RECIPES} from "../actions/actionTypes";
 
-const API_URL = "http://localhost:3001"
+//const API_URL = "http://localhost:3001"
+const API_URL = "https://recipe-club-backend.herokuapp.com/";
 
 
 // get a recipe_details
