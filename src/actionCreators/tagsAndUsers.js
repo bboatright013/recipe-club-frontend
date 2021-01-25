@@ -3,7 +3,7 @@ import axios from 'axios';
 import {LOAD_TAGS, ADD_TAGS, DELETE_TAGS, LOAD_USERS} from "../actions/actionTypes";
 
 //const API_URL = "http://localhost:3001"
-const API_URL = "https://recipe-club-backend.herokuapp.com/";
+const API_URL = "https://recipe-club-backend.herokuapp.com";
 
 // get user list and edit users
 export function loadUsers(payload){

@@ -3,7 +3,7 @@ import axios from 'axios';
 import {LOAD_USER_DETAILS, EDIT_USER_DETAILS, DELETE_USER_DETAILS, GET_USER_DETAILS, ADD_USER_TOKEN, LOGOUT_USER} from "../actions/actionTypes";
 
 //const API_URL = "http://localhost:3001"
-const API_URL = "https://recipe-club-backend.herokuapp.com/";
+const API_URL = "https://recipe-club-backend.herokuapp.com";
 
 // user register & login information returns a token
 export function loadUserDetails(payload){

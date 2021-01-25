@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ADD_COMMENT_TO_RECIPE, DELETE_COMMENT_FROM_RECIPE, EDIT_COMMENT_ON_RECIPE, GET_COMMENTS_FOR_RECIPE } from "../actions/actionTypes";
 
 // const API_URL = "http://localhost:3001"
-const API_URL = "https://recipe-club-backend.herokuapp.com/";
+const API_URL = "https://recipe-club-backend.herokuapp.com";
 
 export function addCommentToRecipes(payload){
     return {

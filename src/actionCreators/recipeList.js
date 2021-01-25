@@ -3,7 +3,7 @@ import axios from 'axios';
 import {LOAD_RECIPES, ADD_RECIPES, DELETE_RECIPES, LOAD_RECIPE_TAGS, GET_FILTERED_RECIPES} from "../actions/actionTypes";
 
 //const API_URL = "http://localhost:3001"
-const API_URL = "https://recipe-club-backend.herokuapp.com/";
+const API_URL = "https://recipe-club-backend.herokuapp.com";
 
 
 // getting the initial list
