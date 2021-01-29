@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import useFields from '../../customHooks/useFields';
-import {addRecipe} from "../../actionCreators/recipeList";
+import {addRecipe, loadRecipes} from "../../actionCreators/recipeList";
 import { transformIngredients, transformInstructions} from "../../helpers/recipeFormHelpers";
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { RiDeleteBack2Fill } from "react-icons/ri";
@@ -60,6 +60,7 @@ const RecipeForm = () => {
             recipeTags
         }
         dispatch(addRecipe(recipe));
+        dispatch(loadRecipes());
         history.push(`/`);
     }
     const handleAddIngredient = evt => {
