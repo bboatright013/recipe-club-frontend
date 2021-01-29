@@ -5,7 +5,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import { getRecipe, dismountRecipe } from '../../actionCreators/recipeDetails';
 import { deleteFromCookbook } from '../../actionCreators/usersCookbook';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Form, FormGroup, Label, Input, Container } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 
 
@@ -13,7 +13,7 @@ const CookbookRecipes = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
     const history = useHistory();
-    const {recipe, isLoggedIn, user, token } = useSelector(store => store);
+    const {recipe, user, token } = useSelector(store => store);
     
     const handleDelete = evt => {
         dispatch(deleteFromCookbook(id, token));
@@ -39,7 +39,7 @@ const CookbookRecipes = () => {
             <Col md="6">
             <h3>{recipe.recipe_name}</h3>
             <div>
-                <img className="Hero-Image" src={recipe.image_url}/>
+                <img className="Hero-Image" alt="hero" src={recipe.image_url}/>
             </div>  
             </Col>
             <Col md="6">

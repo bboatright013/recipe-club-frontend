@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom';
 import {logoutUser} from '../actionCreators/profile';
 import {useHistory} from 'react-router-dom';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand,Nav,NavItem, NavLink, Dropdown,
-     UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText, Button } from 'reactstrap';
-import { CgProfile } from 'react-icons/cg';
+import { Navbar, Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 import { BsPeopleCircle } from "react-icons/bs";
 
 const NavBar = () => {

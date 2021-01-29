@@ -1,17 +1,17 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {useHistory, useParams} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {deleteCommentFromRecipe} from '../../actionCreators/comments';
 import { RiDeleteBack2Fill } from "react-icons/ri";
 
 
 const RecipeDetailsComments = ({comments, user}) => {
     const { token } = useSelector(store => store);
-    const {id} = useParams();
     const history = useHistory();
     const dispatch = useDispatch();
     const handleDelete = evt => {
-        let target = evt.target.parentElement.id;
+        let target = evt.target.parentElement.parentElement.parentElement.parentElement.id;
+        console.log(target);
         dispatch(deleteCommentFromRecipe(target, { token: token}));
         history.push(`/`);
     }
@@ -20,7 +20,7 @@ const RecipeDetailsComments = ({comments, user}) => {
         comments ?
         comments.map(comment => (
             <div key={comment.id} id={comment.id} className="Comment"><span>Posted by: {comment.users_username}</span>
-             { (user.username == comment.users_username) ? 
+             { (user.username === comment.users_username) ? 
             <span className="delete" onClick={handleDelete}> <RiDeleteBack2Fill /></span>
             :
             <></>

@@ -4,7 +4,7 @@ import { getRecipes, getRecipeTags } from "../actionCreators/recipeList"
 import RecipeCard from './RecipeCard';
 import { getFilteredRecipes } from '../actionCreators/recipeList'
 import {CardColumns} from 'reactstrap';
-import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import {  Button, Form, FormGroup, Input } from 'reactstrap';
 import { getTags } from '../actionCreators/tagsAndUsers';
 
 const RecipeListing = () => {

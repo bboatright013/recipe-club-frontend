@@ -10,7 +10,7 @@ import RecipeDetailsIngredient from './RecipeDetailsIngredient';
 import RecipeDetailsRating from './RecipeDetailsRating';
 import RecipeDetailsComments from './RecipeDetailsComments';
 import RecipeDetailsCommentsForm from './RecipeDetailsCommentsForm';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Form, FormGroup, Label, Input, Container } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col} from 'reactstrap';
 import classnames from 'classnames';
 
 
@@ -30,8 +30,6 @@ const handleAddToCookbook = evt => {
     evt.preventDefault();
     dispatch(addToCookbook(id, {token}));
 }
-
-const [recipeTags, setRecipeTags] = useState([]);
 
 useEffect(() => {
     dispatch(getRecipe(id));
@@ -58,7 +56,7 @@ useEffect(() => {
             <Row>
             <Col md="6">
             <div className="Hero-Image-Container">
-                <img className="Hero-Image" src={recipe.image_url}/>
+                <img className="Hero-Image" alt="hero" src={recipe.image_url}/>
                 <div className="Recipe-Details-Postedby"><i>Posted by: {recipe.user_username}</i></div>
                 { (recipe.recipe_tags.length > 0 ) ? recipe.recipe_tags.map( tag => <span key={tag.tag_id}>{tag.tag_name}</span>) : <></> }
             </div>            
@@ -79,7 +77,7 @@ useEffect(() => {
                     <NavLink className={classnames({ active: activeTab === '3' })} onClick={() => { tabToggle('3'); }}>Comments  </NavLink>
                 </NavItem>
                 {
-                    (recipe.user_username == user.username || user.is_admin ) ?
+                    (recipe.user_username === user.username || user.is_admin ) ?
                     <NavItem>
                         <NavLink className={classnames({ active: activeTab === '4' })} onClick={() => { tabToggle('4'); }}>Content Owner  </NavLink>
                     </NavItem> :
@@ -105,7 +103,7 @@ useEffect(() => {
                     <RecipeDetailsCommentsForm recipeId={id} />
                     <RecipeDetailsComments comments={recipe.comments} user={user} />    
                 </TabPane>
-                { (recipe.user_username == user.username || user.is_admin )
+                { (recipe.user_username === user.username || user.is_admin )
                     ?
                     <TabPane tabId="4">
                         <div className="Content-Owner">

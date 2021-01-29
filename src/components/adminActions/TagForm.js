@@ -8,7 +8,7 @@ import { Button, Form, Label, Input } from 'reactstrap';
 const TagForm = () => {
     const dispatch = useDispatch();
     const history = useHistory();
-    const { user, token } = useSelector(store => store);
+    const { token } = useSelector(store => store);
 
     const tagFields = {
         "tag_name" : ""

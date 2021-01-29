@@ -3,7 +3,8 @@ import axios from 'axios';
 import {ADD_USER_RATING, DELETE_USER_RATING, EDIT_USER_RATING, LOAD_USER_RATINGS} from "../actions/actionTypes";
 
 //const API_URL = "http://localhost:3001"
-const API_URL = "https://recipe-club-backend.herokuapp.com";
+//const API_URL = "https://recipe-club-backend.herokuapp.com";
+import { API_URL } from "./api_config";
 
 
 

@@ -6,7 +6,7 @@ import { CardColumns } from 'reactstrap';
 
 
 const Cookbook = () => {
-    const { token, cookbook, user } = useSelector(store => store);
+    const { cookbook, user } = useSelector(store => store);
     const dispatch = useDispatch();
     const username = localStorage.getItem("username");
     useEffect(()=>{

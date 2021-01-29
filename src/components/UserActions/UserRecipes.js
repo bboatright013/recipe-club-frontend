@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import RecipeCard from '../RecipeCard';
 import {getRecipes} from '../../actionCreators/recipeList';
@@ -6,8 +6,8 @@ import {CardColumns} from 'reactstrap';
 
 const UserRecipes = () => {
     const dispatch = useDispatch();
-    const { recipes, tags, user } = useSelector(store => store);
-    let user_recipes = recipes.filter( recipe => recipe.user_username == user.username);
+    const { recipes, user } = useSelector(store => store);
+    let user_recipes = recipes.filter( recipe => recipe.user_username === user.username);
 
     useEffect(() => {
         dispatch(getRecipes())

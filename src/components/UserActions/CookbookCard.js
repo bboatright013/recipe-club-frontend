@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, Badge
-  } from 'reactstrap';
+import { Card, CardImg, CardTitle, CardSubtitle } from 'reactstrap';
 
 const CookbookCard = ({username, id, recipe_name, image_url, created_on, user_username}) => {
 

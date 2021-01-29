@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './App.css';
 import Routes from './components/Routes';
 import NavBar from "./components/NavBar";

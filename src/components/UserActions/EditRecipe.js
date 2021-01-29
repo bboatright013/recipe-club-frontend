@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {useHistory, useParams} from 'react-router-dom';
-import useFields from '../../customHooks/useFields';
 import {editRecipe} from "../../actionCreators/recipeDetails";
 import { transformIngredients, transformInstructions} from "../../helpers/recipeFormHelpers";
 import { getRecipe, dismountRecipe } from '../../actionCreators/recipeDetails'
-import { LOAD_RECIPE_TAGS } from '../../actions/actionTypes';
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { RiDeleteBack2Fill } from "react-icons/ri";
 
@@ -124,20 +122,6 @@ const EditRecipe = () => {
         let filteredArray = instructionsState.filter(item => item !== evt.target.parentElement.id);
         setInstructions(filteredArray);
     }
-    // const checkForTag = (tagId) => {
-    //     let found = recipe.recipe_tags.find(tag => tag.tag_id == tagId);
-    //     if(found == undefined){
-    //         console.log("not found in recipes tags");
-    //         return false;
-    //     }
-    //     setRecipeTags(recipeTags => ([
-    //         ...recipeTags,
-    //         tagId
-    //     ]));
-
-    //     console.log("checked for tag", tagId);
-    //     return true;
-    // }
 
     return (
         recipe.instructions || recipe.ingredients ?

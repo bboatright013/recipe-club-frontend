@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import useFields from '../../customHooks/useFields';
 import { addCommentToRecipe } from '../../actionCreators/comments';
-import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, Label, Input } from 'reactstrap';
 
 const RecipeDetailsCommentsForm = ({recipeId}) => {
         const dispatch = useDispatch();

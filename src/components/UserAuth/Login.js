@@ -1,14 +1,13 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import useFields from '../../customHooks/useFields';
 import {login} from "../../actionCreators/profile";
-import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Login = () => {
     const dispatch = useDispatch();
     const history = useHistory();
-    const { token, username, admin } = useSelector(store => store.user);
     const loginFields = { 
         "username" : "",
         "password" : ""
